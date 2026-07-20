@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mobile interior and exterior vehicle cleaning in Scunthorpe and surrounding areas. Book Ethan's Auto Care today.">
+  <title>Ethan's Auto Care | Mobile Vehicle Cleaning in Scunthorpe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #121212;
+      --panel-soft: #181818;
+      --border: #2b2b2b;
+      --text: #f7f7f7;
+      --muted: #c8c8c8;
+      --red: #e31b23;
+      --red-hover: #f1262e;
+      --red-soft: rgba(227, 27, 35, 0.12);
+      --green: #34c759;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 90% 0, rgba(227, 27, 35, 0.17), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: "Poppins", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 8, 8, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .main-nav a {
+      padding: 10px 13px;
+      border-radius: 10px;
+      color: #dddddd;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: #ffffff;
+      background: #202020;
+    }
+
+    .main-nav a.active {
+      color: #ffffff;
+      background: var(--red);
+    }
+
+    .phone {
+      justify-self: end;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0 82px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #ff777c;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      letter-spacing: -0.06em;
+    }
+
+    .hero-copy {
+      max-width: 710px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 11px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--red);
+      color: #ffffff;
+      box-shadow: 0 14px 28px rgba(227, 27, 35, 0.2);
+    }
+
+    .button-primary:hover {
+      background: var(--red-hover);
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: #ffffff;
+    }
+
+    .button-secondary:hover {
+      background: #1f1f1f;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 22px;
+      background:
+        linear-gradient(145deg, rgba(227,27,35,0.12), transparent 50%),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      top: -60px;
+      right: -60px;
+      border-radius: 50%;
+      background: rgba(227, 27, 35, 0.18);
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.45rem;
+    }
+
+    .hero-card p {
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+
+    .quick-facts {
+      display: grid;
+      gap: 12px;
+    }
+
+    .quick-fact {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .check {
+      width: 26px;
+      height: 26px;
+      flex: 0 0 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #071209;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .quick-fact strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .quick-fact span {
+      color: #bcbcbc;
+      font-size: 0.9rem;
+    }
+
+    .section {
+      padding: 82px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      letter-spacing: -0.045em;
+    }
+
+    .section-heading p {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .service-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.45rem;
+    }
+
+    .service-time {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--red-soft);
+      color: #ff858a;
+      font-size: 0.76rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .price {
+      margin-bottom: 14px;
+      color: #ff686e;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    .service-card ul {
+      margin: 18px 0 0;
+      padding-left: 1.2rem;
+      color: #d1d1d1;
+    }
+
+    .service-card li {
+      margin: 8px 0;
+    }
+
+    .pricing-note {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid rgba(227, 27, 35, 0.42);
+      border-left: 5px solid var(--red);
+      border-radius: 13px;
+      background: var(--red-soft);
+    }
+
+    .pricing-note p {
+      margin: 0;
+      color: #e0e0e0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--panel);
+    }
+
+    .feature-number {
+      margin-bottom: 18px;
+      color: #ff686e;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .step-card {
+      position: relative;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--panel);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: var(--red);
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .step-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.03rem;
+    }
+
+    .step-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .area-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(227,27,35,0.11), transparent 50%),
+        var(--panel);
+    }
+
+    .area-card h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+    }
+
+    .area-card p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .review-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--panel);
+    }
+
+    .stars {
+      margin-bottom: 12px;
+      color: #ff686e;
+      letter-spacing: 0.15em;
+      font-size: 0.95rem;
+    }
+
+    .review-card blockquote {
+      margin: 0 0 18px;
+      color: #dddddd;
+    }
+
+    .review-card cite {
+      color: #999999;
+      font-style: normal;
+      font-size: 0.88rem;
+    }
+
+    .cta {
+      padding: 88px 0;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      padding: 46px;
+      border: 1px solid rgba(227, 27, 35, 0.42);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at top right, rgba(227,27,35,0.25), transparent 28rem),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: -0.05em;
+    }
+
+    .cta-box p {
+      max-width: 700px;
+      margin: 16px 0 0;
+      color: var(--muted);
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    footer {
+      padding: 34px 0 42px;
+      border-top: 1px solid var(--border);
+      color: #969696;
+      font-size: 0.86rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .footer-brand {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .footer-brand span {
+      color: var(--red);
+    }
+
+    .footer-copy {
+      margin-top: 8px;
+      max-width: 360px;
+      color: #989898;
+    }
+
+    .footer-links strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a {
+      display: block;
+      margin: 6px 0;
+      color: #aaaaaa;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 920px) {
+      .header-inner {
+        grid-template-columns: 1fr auto;
+      }
+
+      .main-nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-bottom: 12px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .header-inner {
+        padding: 13px 0 11px;
+      }
+
+      .phone {
+        font-size: 0.84rem;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      .main-nav a {
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding: 62px 0 52px;
+      }
+
+      .services-grid,
+      .steps-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-top,
+      .area-card {
+        grid-template-columns: 1fr;
+      }
+
+      .area-card {
+        display: grid;
+      }
+
+      .cta-box {
+        padding: 30px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        Ethan's <span>Auto Care</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="appointment.html">Your Appointment</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+
+      <a class="phone" href="tel:+447377257990">
+        07377 257990
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Mobile vehicle cleaning in Scunthorpe</p>
+          <h1>A cleaner car, without leaving home.</h1>
+          <p class="hero-copy">
+            Ethan's Auto Care provides affordable mobile interior and exterior vehicle cleaning across Scunthorpe
+            and nearby areas. We come to you, inspect the vehicle, agree the price and get to work.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#services">View services</a>
+            <a class="button button-secondary" href="tel:+447377257990">Call 07377 257990</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2>Why book with us?</h2>
+          <p>Simple, local and convenient vehicle cleaning at your address.</p>
+
+          <div class="quick-facts">
+            <div class="quick-fact">
+              <div class="check">✓</div>
+              <div>
+                <strong>We come to you</strong>
+                <span>Home, driveway or another suitable agreed location.</span>
+              </div>
+            </div>
+
+            <div class="quick-fact">
+              <div class="check">✓</div>
+              <div>
+                <strong>Prices agreed first</strong>
+                <span>No work begins until the final price is confirmed.</span>
+              </div>
+            </div>
+
+            <div class="quick-fact">
+              <div class="check">✓</div>
+              <div>
+                <strong>Local service</strong>
+                <span>Based in Scunthorpe and serving surrounding areas.</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our services</p>
+          <h2>Simple cleaning services for your vehicle</h2>
+          <p>
+            Choose the service you need. Prices start from £5 and are confirmed after the vehicle's condition has
+            been checked.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-top">
+              <div>
+                <h3>Interior Clean</h3>
+                <div class="price">From £5</div>
+              </div>
+              <span class="service-time">Around 1 hour</span>
+            </div>
+
+            <p>
+              A general clean of the vehicle interior, ideal for regular maintenance and everyday dirt.
+            </p>
+
+            <ul>
+              <li>General vacuuming</li>
+              <li>Dashboard and interior surfaces</li>
+              <li>Door areas</li>
+              <li>Interior windows</li>
+              <li>Final checks before completion</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-top">
+              <div>
+                <h3>Exterior Clean</h3>
+                <div class="price">From £5</div>
+              </div>
+              <span class="service-time">Around 2 hours</span>
+            </div>
+
+            <p>
+              A careful exterior clean to remove general road dirt and improve the overall appearance of the vehicle.
+            </p>
+
+            <ul>
+              <li>Hand wash</li>
+              <li>Wheels and tyres</li>
+              <li>Exterior windows</li>
+              <li>Vehicle drying</li>
+              <li>Final checks before completion</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="pricing-note">
+          <p>
+            <strong>Condition-based pricing:</strong> heavily soiled vehicles, excessive pet hair, staining,
+            rubbish, mud or difficult access may increase the final price. You will always be told the price before
+            work starts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Why Ethan's Auto Care</p>
+          <h2>Built around convenience and clear communication</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-number">01</div>
+            <h3>Mobile service</h3>
+            <p>There is no need to drive to a valeting centre. We clean the vehicle at an agreed location.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-number">02</div>
+            <h3>Clear pricing</h3>
+            <p>The condition is checked first and the final price is agreed before any cleaning begins.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-number">03</div>
+            <h3>Local and personal</h3>
+            <p>Deal directly with a small independent business rather than a large chain or call centre.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-number">04</div>
+            <h3>Flexible appointments</h3>
+            <p>Appointments can be arranged around availability, weather and the amount of work required.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-number">05</div>
+            <h3>Vehicle condition recorded</h3>
+            <p>Before-and-after photographs may be taken to document the vehicle and completed work.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-number">06</div>
+            <h3>Simple aftercare</h3>
+            <p>Customers receive clear preparation and aftercare guidance through the appointment information page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2>Four simple steps</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Make contact</h3>
+            <p>Call or message with your vehicle, location and the service you need.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Confirm the booking</h3>
+            <p>Agree a suitable date, time and location for the appointment.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Vehicle inspection</h3>
+            <p>The vehicle condition is checked and the final price is agreed.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Cleaning begins</h3>
+            <p>Once you are happy with the price, the selected service is completed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="area-card">
+          <div>
+            <p class="eyebrow">Service area</p>
+            <h2>Covering Scunthorpe and nearby areas</h2>
+            <p>
+              Ethan's Auto Care primarily serves Scunthorpe, North Lincolnshire and surrounding locations.
+              Contact us with your postcode or area to check whether we can travel to you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Customer feedback</p>
+          <h2>Reviews</h2>
+          <p>
+            Reviews are left by past customers to let us know their thoughts on the services provided.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>
+              “Did a brilliant job at cleaning my car, great service at an unbeatable price”
+            </blockquote>
+            <cite>Callum</cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <p class="eyebrow">Ready to get started?</p>
+          <h2>Book your vehicle clean today</h2>
+          <p>
+            Contact Ethan's Auto Care with your vehicle details, location and preferred service. We will confirm
+            availability and explain what happens next.
+          </p>
+
+          <div class="cta-actions">
+            <a class="button button-primary" href="tel:+447377257990">Call 07377 257990</a>
+            <a class="button button-secondary" href="appointment.html">Appointment information</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Ethan's <span>Auto Care</span></div>
+          <p class="footer-copy">
+            Mobile interior and exterior vehicle cleaning in Scunthorpe and surrounding areas.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <strong>Website</strong>
+          <a href="index.html">Home</a>
+          <a href="appointment.html">Your Appointment</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-links">
+          <strong>Contact</strong>
+          <a href="tel:+447377257990">07377 257990</a>
+          <a href="mailto:ethansautocare@outlook.com">ethansautocare@outlook.com</a>
+          <span>Scunthorpe, North Lincolnshire</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Ethan's Auto Care</span>
+        <span>Independent mobile vehicle cleaning service</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Everything you need to know before your Ethan's Auto Care appointment, including preparation steps, FAQs and contact information.">
+  <title>Before Your Appointment | Ethan's Auto Care</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #121212;
+      --panel-soft: #181818;
+      --border: #2b2b2b;
+      --text: #f7f7f7;
+      --muted: #c8c8c8;
+      --red: #e31b23;
+      --red-soft: rgba(227, 27, 35, 0.12);
+      --green: #34c759;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(227, 27, 35, 0.17), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: "Poppins", Arial, sans-serif;
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 8, 8, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .main-nav a {
+      padding: 10px 13px;
+      border-radius: 10px;
+      color: #dddddd;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: #ffffff;
+      background: #202020;
+    }
+
+    .main-nav a.active {
+      color: #ffffff;
+      background: var(--red);
+    }
+
+    .phone {
+      justify-self: end;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 82px 0 60px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #ff777c;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 900px;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      letter-spacing: -0.055em;
+    }
+
+    .hero-copy {
+      max-width: 790px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 11px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--red);
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: #f0252d;
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: #ffffff;
+    }
+
+    .button-secondary:hover {
+      background: #1f1f1f;
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 46px;
+      padding: 56px 0 90px;
+    }
+
+    .contents {
+      position: sticky;
+      top: 104px;
+      align-self: start;
+      max-height: calc(100vh - 128px);
+      overflow-y: auto;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .contents strong {
+      display: block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.76rem;
+    }
+
+    .contents a {
+      display: block;
+      padding: 6px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+    }
+
+    .contents a:hover {
+      color: #ffffff;
+    }
+
+    .success-box {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding: 22px;
+      border: 1px solid rgba(52, 199, 89, 0.38);
+      border-left: 5px solid var(--green);
+      border-radius: 14px;
+      background: rgba(52, 199, 89, 0.08);
+    }
+
+    .success-icon {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #071209;
+      font-weight: 800;
+    }
+
+    .success-box p {
+      margin: 4px 0 0;
+    }
+
+    section {
+      scroll-margin-top: 105px;
+      padding: 34px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:first-of-type {
+      padding-top: 4px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0 0 7px;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: #d2d2d2;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.3rem;
+      color: #d2d2d2;
+    }
+
+    li {
+      margin: 9px 0;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 16px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--red);
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .step p {
+      margin-bottom: 0;
+    }
+
+    .service-grid,
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .card {
+      padding: 21px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .service-price {
+      color: #ff686e;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--red-soft);
+      color: #ff858a;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .warning {
+      margin: 18px 0;
+      padding: 20px;
+      border: 1px solid rgba(227, 27, 35, 0.42);
+      border-left: 5px solid var(--red);
+      border-radius: 13px;
+      background: var(--red-soft);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    summary {
+      position: relative;
+      padding: 18px 52px 18px 20px;
+      cursor: pointer;
+      list-style: none;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      color: #ff646a;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding: 0 20px 18px;
+      margin: 0;
+    }
+
+    .contact-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--panel-soft);
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .legal-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .legal-link {
+      display: block;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .legal-link:hover {
+      border-color: rgba(227, 27, 35, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .legal-link span {
+      display: block;
+      color: #ff6b70;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .small {
+      color: #a9a9a9;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 32px 0 42px;
+      border-top: 1px solid var(--border);
+      color: #969696;
+      font-size: 0.86rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    @media (max-width: 920px) {
+      .header-inner {
+        grid-template-columns: 1fr auto;
+      }
+
+      .main-nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-bottom: 12px;
+      }
+
+      .page-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contents {
+        position: static;
+        max-height: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .header-inner {
+        padding: 13px 0 11px;
+      }
+
+      .phone {
+        font-size: 0.84rem;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      .main-nav a {
+        white-space: nowrap;
+      }
+
+      .hero {
+        padding: 56px 0 44px;
+      }
+
+      .page-layout {
+        gap: 30px;
+        padding-top: 34px;
+      }
+
+      .service-grid,
+      .info-grid,
+      .legal-links {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        grid-template-columns: 42px minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ethan's <span>Auto Care</span></a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="appointment.html" aria-current="page">Your Appointment</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+
+      <a class="phone" href="tel:+447377257990">07377 257990</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Your booking guide</p>
+        <h1>Prepare for your appointment</h1>
+        <p class="hero-copy">
+          Thank you for booking with Ethan's Auto Care. This page explains how to prepare your vehicle,
+          what to expect on the day, and answers the most common questions.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#prepare">Preparation checklist</a>
+          <a class="button button-secondary" href="#faq">Read the FAQs</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container page-layout">
+      <aside class="contents" aria-label="Page contents">
+        <strong>On this page</strong>
+        <a href="#confirmation">1. Booking confirmation</a>
+        <a href="#prepare">2. How to prepare</a>
+        <a href="#day">3. What happens on the day</a>
+        <a href="#services">4. Services and timings</a>
+        <a href="#pricing">5. Pricing</a>
+        <a href="#access">6. Access and utilities</a>
+        <a href="#weather">7. Weather</a>
+        <a href="#condition">8. Vehicle condition</a>
+        <a href="#belongings">9. Personal belongings</a>
+        <a href="#changes">10. Changes and cancellations</a>
+        <a href="#after">11. After the clean</a>
+        <a href="#faq">12. Frequently asked questions</a>
+        <a href="#contact">13. Contact us</a>
+        <a href="#legal">14. Legal information</a>
+      </aside>
+
+      <article>
+        <div class="success-box">
+          <div class="success-icon">✓</div>
+          <div>
+            <strong>Your booking has been received!</strong>
+            <p>
+              Please check that your appointment time, address, selected service and vehicle details are correct.
+              Contact us as soon as possible if anything needs changing.
+            </p>
+          </div>
+        </div>
+
+        <section id="confirmation">
+          <h2>1. Check your booking details</h2>
+          <p>Before the appointment, please make sure the following information is correct:</p>
+          <ul>
+            <li>your appointment date and time;</li>
+            <li>the full address where the vehicle will be cleaned;</li>
+            <li>your vehicle registration, make and model;</li>
+            <li>the service you selected; and</li>
+            <li>your telephone number so we can contact you if needed.</li>
+          </ul>
+          <p>
+            If you booked more than one vehicle, please make sure each vehicle has its own appointment and allow
+            enough time between bookings.
+          </p>
+        </section>
+
+        <section id="prepare">
+          <h2>2. How to prepare your vehicle</h2>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <h3>Remove valuable and important items</h3>
+                <p>
+                  Please remove money, documents, electronics, medication, fragile items and anything sentimental.
+                  We cannot accept responsibility for belongings left inside the vehicle.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <h3>Clear loose rubbish where possible</h3>
+                <p>
+                  Small amounts of everyday rubbish are fine, but removing excessive bags, boxes or personal items
+                  allows more time to be spent cleaning.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <h3>Make the vehicle accessible</h3>
+                <p>
+                  Park somewhere safe with enough room to move around the vehicle. Avoid narrow roads, restricted
+                  parking areas and locations where cleaning is not permitted.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div>
+                <h3>Have the keys available</h3>
+                <p>
+                  For an interior clean, the vehicle must be unlocked. Please arrange for someone to provide the
+                  keys at the appointment time.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">5</div>
+              <div>
+                <h3>Tell us about anything unusual</h3>
+                <p>
+                  Let us know in advance about heavy pet hair, mould, bodily fluids, sharp objects, pests, severe
+                  staining, loose trim, leaks or damaged electrical parts.
+                </p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">6</div>
+              <div>
+                <h3>Keep children and pets away</h3>
+                <p>
+                  Cleaning products, cables and equipment may create hazards. Please keep children and pets safely
+                  away from the working area.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="day">
+          <h2>3. What happens on the day</h2>
+          <ol>
+            <li>We will arrive at the agreed address and contact you if necessary.</li>
+            <li>We will briefly inspect the vehicle and confirm the work required.</li>
+            <li>The final price will be agreed before cleaning begins.</li>
+            <li>We may take photographs to record the vehicle's condition.</li>
+            <li>The vehicle will be cleaned using the selected service.</li>
+            <li>We will carry out final checks and show you the completed work.</li>
+            <li>Payment will be due once the service is complete.</li>
+          </ol>
+          <p>
+            Service times are estimates. Heavily soiled vehicles, difficult access and unexpected issues can make
+            an appointment take longer.
+          </p>
+        </section>
+
+        <section id="services">
+          <h2>4. Services and estimated timings</h2>
+
+          <div class="service-grid">
+            <div class="card">
+              <span class="tag">Approximately 1 hour</span>
+              <h3>Interior Clean</h3>
+              <div class="service-price">From £5</div>
+              <p>
+                General vacuuming, interior wipe-down, dashboard, doors and interior windows, depending on the
+                vehicle's condition.
+              </p>
+            </div>
+
+            <div class="card">
+              <span class="tag">Approximately 2 hours</span>
+              <h3>Exterior Clean</h3>
+              <div class="service-price">From £5</div>
+              <p>
+                Hand wash, wheels, tyres, exterior windows and drying, depending on weather, access and condition.
+              </p>
+            </div>
+          </div>
+
+          <p class="small">
+            The exact work included is the service description shown when you booked or anything separately agreed
+            with you before the appointment.
+          </p>
+        </section>
+
+        <section id="pricing">
+          <h2>5. How pricing works</h2>
+          <p>
+            Advertised prices are starting prices. The final price is based on the vehicle's condition and the
+            amount of work required.
+          </p>
+
+          <div class="info-grid">
+            <div class="card">
+              <h3>Light condition</h3>
+              <p>Regular dust, light dirt and a generally maintained vehicle.</p>
+            </div>
+
+            <div class="card">
+              <h3>Moderate condition</h3>
+              <p>More noticeable dirt, rubbish, pet hair, staining or mud that requires extra time.</p>
+            </div>
+
+            <div class="card">
+              <h3>Heavy condition</h3>
+              <p>Severe soiling, excessive pet hair, embedded dirt, heavy staining or significant rubbish.</p>
+            </div>
+
+            <div class="card">
+              <h3>Price confirmation</h3>
+              <p>You will always be given a clear price before any work begins.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="access">
+          <h2>6. Access, parking, water and electricity</h2>
+          <p>
+            Please make sure the vehicle is parked legally and in a location where there is enough safe working
+            space around it.
+          </p>
+          <p>
+            Where access to water or electricity has been agreed as part of the appointment, please make sure the
+            supply is available, safe and authorised for use.
+          </p>
+          <p>
+            If your property has gates, parking restrictions, permits or access codes, please provide the relevant
+            information before the appointment.
+          </p>
+        </section>
+
+        <section id="weather">
+          <h2>7. Weather and outdoor appointments</h2>
+          <p>
+            Exterior cleans may need to be delayed, shortened or rearranged during heavy rain, strong wind,
+            lightning, ice, extreme heat or other unsafe conditions.
+          </p>
+
+          <div class="warning">
+            <strong>Weather changes can happen at short notice.</strong>
+            <p>
+              We will contact you as soon as reasonably possible if the forecast or conditions mean the appointment
+              cannot go ahead safely.
+            </p>
+          </div>
+        </section>
+
+        <section id="condition">
+          <h2>8. Severe vehicle condition and unsafe materials</h2>
+          <p>
+            Please contact us before the appointment if the vehicle contains mould, blood, vomit, faeces, needles,
+            broken glass, chemicals, fuel, pests or any other potentially hazardous material.
+          </p>
+          <p>
+            We may refuse or stop work if the vehicle is unsafe, presents a health risk, requires specialist
+            equipment or is beyond the service booked.
+          </p>
+          <p>
+            Complete removal of stains, smells, pet hair and permanent marks cannot be guaranteed.
+          </p>
+        </section>
+
+        <section id="belongings">
+          <h2>9. Personal belongings and child seats</h2>
+          <p>
+            Please remove belongings before an interior clean. Items left inside may prevent certain areas from
+            being cleaned.
+          </p>
+          <p>
+            Child seats will not normally be removed, dismantled or reinstalled. The customer is responsible for
+            ensuring that any child seat is fitted correctly and safely before the vehicle is used.
+          </p>
+        </section>
+
+        <section id="changes">
+          <h2>10. Rearranging or cancelling</h2>
+          <p>
+            Please give as much notice as possible if you need to cancel or move your appointment. Repeated missed
+            appointments or late cancellations may lead to future bookings being declined.
+          </p>
+          <p>
+            If we need to rearrange because of weather, illness, equipment failure, travel disruption or another
+            unexpected issue, we will contact you and offer another suitable appointment where possible.
+          </p>
+          <p>
+            Full cancellation information is available in our Terms &amp; Conditions.
+          </p>
+        </section>
+
+        <section id="after">
+          <h2>11. After the clean</h2>
+          <ul>
+            <li>Inspect the vehicle before we leave and let us know about any concern.</li>
+            <li>Allow damp interior surfaces or mats to dry fully where applicable.</li>
+            <li>Avoid placing wet or dirty items straight back into the vehicle.</li>
+            <li>Keep your receipt or booking confirmation for your records.</li>
+            <li>Contact us promptly if you notice an issue after the appointment.</li>
+          </ul>
+          <p>
+            Before-and-after photographs may be used for business promotion only with your permission.
+          </p>
+        </section>
+
+        <section id="faq">
+          <h2>12. Frequently asked questions</h2>
+
+          <div class="faq-list">
+            <details>
+              <summary>Do you come to my address?</summary>
+              <p>
+                Yes. Ethan's Auto Care is a mobile service covering Scunthorpe and other nearby locations agreed at
+                booking.
+              </p>
+            </details>
+
+            <details>
+              <summary>Do I need to be home?</summary>
+              <p>
+                Someone must be available to provide access to the vehicle, confirm the price and make payment,
+                unless another arrangement has been agreed beforehand.
+              </p>
+            </details>
+
+            <details>
+              <summary>Are the advertised prices fixed?</summary>
+              <p>
+                No. They are starting prices. The final amount depends on the vehicle's condition and is confirmed
+                before work begins.
+              </p>
+            </details>
+
+            <details>
+              <summary>What payment methods do you accept?</summary>
+              <p>
+                Cash is currently accepted. Payment is due once the service is complete.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can I book two vehicles?</summary>
+              <p>
+                Yes, but each vehicle should have its own booking and enough time must be left between appointments.
+              </p>
+            </details>
+
+            <details>
+              <summary>What happens if my vehicle is very dirty?</summary>
+              <p>
+                We will inspect it and confirm whether extra time or an increased price is required. You can decline
+                the revised price before any work starts.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can you guarantee that every stain or smell will be removed?</summary>
+              <p>
+                No. Some stains, odours, scratches and permanent marks cannot be completely removed through a
+                standard clean.
+              </p>
+            </details>
+
+            <details>
+              <summary>Do you remove pet hair?</summary>
+              <p>
+                Light pet hair may be included, but excessive or embedded pet hair can require extra time and may
+                increase the price.
+              </p>
+            </details>
+
+            <details>
+              <summary>Will my appointment be cancelled if it rains?</summary>
+              <p>
+                Not always. Light weather may be manageable, but unsafe or unsuitable conditions can mean an
+                exterior appointment needs to be rearranged.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can I leave belongings in the car?</summary>
+              <p>
+                You should remove valuables, fragile items and loose belongings. Areas blocked by items may not be
+                cleaned.
+              </p>
+            </details>
+
+            <details>
+              <summary>Do you clean mould, bodily fluids or hazardous waste?</summary>
+              <p>
+                These must be disclosed before booking. We may be unable to accept the work because specialist
+                protective equipment or treatment may be required.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can you clean a van?</summary>
+              <p>
+                Contact us before booking with the vehicle details and condition. Larger or commercial vehicles may
+                require a longer appointment or different quote.
+              </p>
+            </details>
+
+            <details>
+              <summary>What should I do if I am unhappy with the result?</summary>
+              <p>
+                Please tell us before we leave where possible. Otherwise, contact us promptly with your appointment
+                details and photographs so the concern can be reviewed.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>13. Need to change something?</h2>
+
+          <div class="contact-card">
+            <h3>Contact Ethan's Auto Care</h3>
+            <p>
+              Please include your name, appointment time, vehicle registration and the change you need to make.
+            </p>
+            <p><strong>Telephone:</strong> 07377 257990</p>
+            <p><strong>Email:</strong> ethansautocare@outlook.com</p>
+
+            <div class="contact-actions">
+              <a class="button button-primary" href="tel:+447377257990">Call 07377 257990</a>
+              <a class="button button-secondary" href="index.html">Return to home</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="legal">
+          <h2>14. Important legal information</h2>
+          <p>
+            Your booking is also subject to our Terms &amp; Conditions and Privacy Policy. Please read both before
+            your appointment.
+          </p>
+
+          <div class="legal-links">
+            <a class="legal-link" href="terms.html">
+              <span>Legal information</span>
+              <strong>Terms &amp; Conditions</strong>
+              <p>Pricing, cancellations, responsibilities, liability and customer rights.</p>
+            </a>
+
+            <a class="legal-link" href="privacy.html">
+              <span>Data protection</span>
+              <strong>Privacy Policy</strong>
+              <p>How customer and booking information is collected, used and protected.</p>
+            </a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Ethan's Auto Care</span>
+      <span>Appointment information last updated 20 July 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
