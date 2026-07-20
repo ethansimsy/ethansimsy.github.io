@@ -599,6 +599,14 @@
       border-top: 1px solid var(--border);
     }
 
+    @media (max-width: 680px) {
+        .widget-wrap,
+        .setmore-embed {
+            min-height: 1050px;
+            height: 1050px;
+        }
+    }
+
     @media (max-width: 920px) {
       .header-inner {
         grid-template-columns: 1fr auto;
@@ -686,6 +694,7 @@
 
       <nav class="main-nav" aria-label="Main navigation">
         <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="booking.html">Book Now</a>
         <a href="appointment.html">Your Appointment</a>
         <a href="terms.html">Terms</a>
         <a href="privacy.html">Privacy</a>
